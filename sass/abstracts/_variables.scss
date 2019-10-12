@@ -5,9 +5,18 @@ $green-3:        #4A8C7A;
 $trees-1:        #D9704A;
 $trees-2:        #A65149;
 
+/* Color Theme Swatches in Hex */
+$pas-1:     #F8B195;
+
+$pas-2:     #F67280;
+$pas-3:     #C06C84;
+$pas-4:     #6C5B7B;
+$pas-5:     #355C7D;
+$pas-6:     rgb(70, 145, 211);
 
 $soft-gray:      #f7f7f7;
 $flat-white:     #fff;
+$gray:           #eee;
 $txt-gray:       #777;
 $black:          #000;
 
@@ -15,5 +24,6 @@ $black:          #000;
 // GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
+$gutter-vertical-sm: 6rem;
 $gutter-horizontal: 6rem;
 

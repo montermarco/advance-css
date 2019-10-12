@@ -1,0 +1,170 @@
+.navigation {
+
+    &__checkbox{
+        display: none;
+    }
+
+    &__button {
+        background-color: $flat-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($black, .3); 
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(tp){
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(ph){
+            top: 3rem;
+            right: 3rem;
+        }
+    }
+
+    // 
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($green-1, $pas-6);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(1, 0, 0, 1);    
+        
+        @include respond(tp){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(ph){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+    }
+
+    &__nav {
+        height: 100vh;        
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0%;
+        transition:all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);;
+
+
+    }
+    
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__item {
+        margin: 1.5rem;
+    }
+
+    //the hover effect for the services links will be a gradient separated, so the color whithe wont be seen cause it's on the right
+    &__link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1.2rem;
+            padding: 1rem 2rem;
+            color: $flat-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $flat-white 50%);
+            background-size: 220%;
+            transition: all .4s;
+        }
+        // when link hovered
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $green-1;
+            transform: translateX(1rem)
+        }
+    }
+
+    // this activate the background animation whrn checkbox is checked
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    // Icon Navigation cross icon with spans transformations
+
+    &__icon {
+        
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3px;
+            background-color: $txt-gray;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .3s;
+        }
+
+        &::before { top: -.8rem; }
+        &::after  { top:  .8rem; }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    // Here goes the animation of the hamburger turning into the cross
+    // when the check is selected, it also select it's brother which is the button, and then the button child which is the icon
+    &__checkbox:checked  + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked  + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+
+    }
+    &__checkbox:checked  + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
+

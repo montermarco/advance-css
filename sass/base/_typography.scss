@@ -1,5 +1,4 @@
-body {
-    padding: 3rem;
+body {    
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
@@ -12,7 +11,6 @@ body {
     color: $flat-white;
     text-transform: uppercase;
     margin-bottom: 6rem;
-
     backface-visibility: hidden;
 
     &--main{
@@ -21,6 +19,11 @@ body {
         font-weight: 400;
         letter-spacing: 3.5rem;
     
+        @include respond(ph) {
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
+
         animation-name: moveInLeft;
         animation-duration: 3s;
         animation-timing-function: ease-out;
@@ -31,6 +34,10 @@ body {
         font-size: 2rem;
         font-weight: 400;
         letter-spacing: 2.6rem;
+
+        @include respond(ph) {
+            letter-spacing: .5rem;            
+        }
     
         animation-name: moveInRight;
         animation-duration: 3s;
@@ -47,6 +54,14 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
+
+    @include respond(tp) {
+        font-size: 3rem;            
+    }
+
+    @include respond(ph) {
+        font-size: 2.5rem;            
+    }
 
     &:hover {
         transform: translateY(-.3rem);

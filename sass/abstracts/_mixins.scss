@@ -6,3 +6,39 @@
         clear: both;
     }
 }
+
+// MEDIA QUERY MANAGER
+/* 
+    [1200 - 1800] is where our normal styles apply    
+    
+    0   - 600px: phone                  
+    600 - 900px: tablet portrait        
+    900 - 1200px: tablet landscape      
+    1800px +: big desktop               
+
+    $breakpoint argument choices:
+    - phone         = ph - 37.5em (600px)
+    - tablet port   = tp - 56.25 (900px)
+    - tablet land   = tl - 75em (1200px)
+    - big desktop   = bd - 112.5em (1800px)
+
+    Media query Unit in em's --> 1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == ph {
+        @media (max-width: 37.5em) { @content };
+    }
+
+    @if $breakpoint == tp {
+        @media (max-width: 56.25em) { @content };
+    }
+
+    @if $breakpoint == tl {
+        @media (max-width: 75em) { @content };
+    }
+
+    @if $breakpoint == bd {
+        @media (min-width: 112.5em) { @content };
+    }
+}

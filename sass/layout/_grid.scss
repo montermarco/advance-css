@@ -4,8 +4,16 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tp){
+            margin-bottom: $gutter-vertical-sm;
+        }
     }
     
+    @include respond(tp){
+        max-width: 50rem;
+    }
+
     @include clearfix;
 
     [class^="col-"] {
@@ -13,12 +21,20 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tp){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-sm;
+            }
+        }
+
+        @include respond(tp){
+            width: 100% !important;
         }
     }
 
     .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);
-        
     }
 
     .col-1-of-3 {

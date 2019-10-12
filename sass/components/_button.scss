@@ -48,6 +48,15 @@
         }
     }
 
+    &--colored{
+        background-image: linear-gradient(to bottom right, $pas-3, $pas-6);
+        color: $flat-white;
+
+        &::after {
+            background-color: $flat-white;
+        }
+    }
+
     &--animated {
         animation: moveInDown 1s ease-out .75s;
         animation-fill-mode: backwards;

@@ -1,18 +1,45 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
+        
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicons.png">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Viajes Monter</title>
     </head>
     <body>
+
+        <div class="navigation">
+            
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                    <span class="navigation__icon">&nbsp;</span>
+            </label>
+            
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+
+                <ul class="navigation__list">                  
+                    
+                    <li class="navigation__item"><a href="" class="navigation__link">Inicio</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Servicios</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Tecnologias</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Nuestro crew</a></li>
+                    <li class="navigation__item"><a href="" class="navigation__link">Contacto</a></li>                    
+                </ul>
+
+            </nav>
+
+        </div>
+ 
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo.svg" alt="logo" class="header__logo">
@@ -41,7 +68,7 @@
                     <div class="col-1-of-2">
                         <h3 class="heading-tertiary u-mg-bt-2 ">Falling in love with nature</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati porro sapiente, voluptates asperiores commodi similique recusandae, amet ipsa iste eveniet debitis atque vel dolore deserunt tempore quam unde inventore soluta.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati porro sapiente, voluptates asperiores commodi similique recusandae, amet ipsa eveniet debitis atque vel dolore deserunt tempore quam unde inventore soluta.
                         </p>
 
                         <h3 class="heading-tertiary u-mg-bt-2">Lived adventures like I never did before</h3>
@@ -59,11 +86,217 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
+
+            <section class="section-features">
+                
+                <div class="row">
+
+                    <!-- BOX 1 -->
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-globe"></i>
+                            <h3 class="heading-tertiary u-mg-bt-2">Explore the world</h3>
+                            <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit dolor sit amet consectetur, adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <!-- BOX 2 -->
+                    <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-signs"></i>
+                                <h3 class="heading-tertiary u-mg-bt-2">Where to go?</h3>
+                                <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                    </div>
+                    <!-- BOX 3 -->
+                    <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-compass"></i>
+                                <h3 class="heading-tertiary u-mg-bt-2">Find your way!</h3>
+                                <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                    </div>
+                    <!-- BOX 4 -->
+                    <div class="col-1-of-4">
+                            <div class="feature-box">
+                                <i class="feature-box__icon icon-basic-heart"></i>
+                                <h3 class="heading-tertiary u-mg-bt-2">Live healthy</h3>
+                                <p class="feature-box__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit dolor sit amet consectetur, adipisicing elit.</p>
+                            </div>
+                    </div>
+
+
+                </div>
 
             </section>
-        </main>
 
-        
+            <section class="section-tours">
+                    <div class="u-center-text u-mg-bt-8">
+                        <h2 class="heading-secondary">
+                            Most popular tours
+                        </h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1-of-3">
+                            <div class="card">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture card__picture--1">
+                                        &nbsp;
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--1">The sea explorer</span>  
+                                    </h4>
+                                    <div class="card__details">
+                                        <ul>
+                                            <li>3 day tour</li>
+                                            <li>Up to 30 people</li>
+                                            <li>Two tour guides</li>
+                                            <li>Sleep in cosy hotels</li>
+                                            <li>Dificulty: Easy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-1">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <p class="card__price-only">Only</p>
+                                            <p class="card__price-value">$399</p>
+                                        </div>
+                                        <a href="#" class="btn btn--white">Book now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                             <div class="card">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture card__picture--2">
+                                        &nbsp;
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--2">The forest hiker</span>  
+                                    </h4>
+                                    <div class="card__details">
+                                        <ul>
+                                            <li>7 day tour</li>
+                                            <li>Up to 20 people</li>
+                                            <li>Six tour guides</li>
+                                            <li>Sleep in privet tents</li>
+                                            <li>Dificulty: Medium</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-2">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <p class="card__price-only">Only</p>
+                                            <p class="card__price-value">$599</p>
+                                        </div>
+                                        <a href="#" class="btn btn--white">Book now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1-of-3">
+                             <div class="card">
+                                <div class="card__side card__side--front">
+                                    <div class="card__picture card__picture--3">
+                                        &nbsp;
+                                    </div>
+                                    <h4 class="card__heading">
+                                        <span class="card__heading-span card__heading-span--3">The Snow adventure</span>  
+                                    </h4>
+                                    <div class="card__details">
+                                        <ul>
+                                            <li>5 day tour</li>
+                                            <li>Up to 15 people</li>
+                                            <li>Three tour guides</li>
+                                            <li>Sleep in provided tents</li>
+                                            <li>Dificulty: Hard</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card__side card__side--back card__side--back-3">
+                                    <div class="card__cta">
+                                        <div class="card__price-box">
+                                            <p class="card__price-only">Only</p>
+                                            <p class="card__price-value">$799</p>
+                                        </div>
+                                        <a href="#" class="btn btn--white">Book now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="u-center-text u-mg-tp-8">
+                        <a href="" class="btn btn--colored">Discover all tours</a>
+                    </div>
+
+            </section>
+
+
+            <section class="section-stories">
+
+                    <div class="bg-video">
+                        <video class="bg-video__content" autoplay muted loop>
+                            <source src="img/video.mp4" type="video/mp4">
+                            <source src="img/video.webm" type="video/webm">
+                            Your browser is not supported!    
+                        </video>
+                    </div>
+
+                    <div class="u-center-text u-mg-bt-8">
+                        <h2 class="heading-secondary">
+                            We make people genwally happy! 
+                        </h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="story">
+                            <figure class="story__shape">
+                                <img src="img/nat-8.jpg" alt="person" class="story__img">
+                                <figcaption class="story__caption">Alexandra Wolf</figcaption>
+                            </figure>
+                            <div class="story__text">
+                                <h3 class="heading-tertiary">
+                                    I had the best time with my family
+                                </h3>
+                                <p class="algo">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit et cupiditate similique earum, libero animi et cupiditate similique earum, libero animi. 
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit et cupiditate similique earum, libero animi et cupiditate similique earum, libero animi.                                     
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="story">
+                            <figure class="story__shape">
+                                <img src="img/nat-9.jpg" alt="person" class="story__img">
+                                <figcaption class="story__caption">Alexandra Wolf</figcaption>
+                            </figure>
+                            <div class="story__text">
+                                <h3 class="heading-tertiary">
+                                    My life is completely different now!
+                                </h3>
+                                <p class="algo">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit et cupiditate similique earum, libero animi et cupiditate similique earum, libero animi. 
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit et cupiditate similique earum, libero animi et cupiditate similique earum, libero animi.                                     
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="u-center-text u-mg-tp-8">
+                        <a href="" class="btn-text">Read all stories &rarr;</a>
+                    </div>
+
+            </section>
+
+        </main>
+      
     </body>
 </html>
